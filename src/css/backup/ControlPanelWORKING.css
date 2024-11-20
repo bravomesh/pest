@@ -1,0 +1,16 @@
+/* ControlPanel.css */
+.control-panel {
+  background-color: #f8f9fa; /* Light background for control panel */
+  padding: 20px;
+  height: calc(100vh - 56px); /* Adjust height based on header height */
+  overflow-y: auto;
+}
+
+.control-panel h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.control-panel .form-group {
+  margin-bottom: 15px;
+}

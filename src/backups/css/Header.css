@@ -1,0 +1,16 @@
+
+.logo {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.title {
+  color: white !important;
+  font-size: 24px;
+  font-weight: bold;
+}
+/* src/components/Header.css */
+.header-navbar {
+  background-color: #0b612d !important;
+  color: white !important;
+}

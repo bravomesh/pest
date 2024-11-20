@@ -1,0 +1,28 @@
+.navbar {
+  background-color: #145839 !important;
+   text-align: right !important;
+}
+
+.nav-link {
+  color: white !important;
+  text-align: right !important;
+}
+
+.nav-link:hover {
+  background-color: #0b3d2e !important;
+  color: white !important;
+}
+
+/* src/css/Navigation.css */
+.nav-right {
+  justify-content: flex-end !important; /* Use flex-end to align items to the right */
+  text-align: right !important;
+}
+.nav-link.active {
+  background-color: white !important; /* Set background to white */
+  color: black !important; /* Set text color to black */
+}
+/* src/css/Navbar.css */
+.menu-navbar .navbar-collapse {
+  justify-content: flex-end;
+}

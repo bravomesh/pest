@@ -1,0 +1,45 @@
+/* Header.css */
+.header-navbar {
+  background-color: #145839 !important;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+}
+
+.header-brand img {
+  margin-right: 10px;
+}
+
+.header-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.nav-link:hover {
+  background-color: #0b3d2e !important;
+  color: white !important;
+}
+
+.nav-link.active {
+  background-color: white !important;
+  color: black !important;
+}
+
+.menu-navbar .navbar-collapse {
+  justify-content: flex-end;
+}

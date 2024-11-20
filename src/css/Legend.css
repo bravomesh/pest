@@ -1,0 +1,53 @@
+/* Legend.css */
+
+.legend {
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .legend-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .legend-title {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .legend-close {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 0;
+    color: #333;
+  }
+  
+  .legend-content {
+    font-size: 0.9em;
+  }
+  
+  .legend-item {
+    margin-bottom: 10px;
+  }
+  
+  .legend-key {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .legend-value {
+    word-break: break-word;
+  }

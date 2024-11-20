@@ -1,0 +1,33 @@
+.sidebar {
+  background-color: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+  position: relative;
+  transition: width 0.3s;
+  overflow: hidden;
+  height: 100vh;
+  width: 250px; /* Full width when open */
+}
+
+.sidebar.closed {
+  width: 0; /* Width when closed */
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: -50px; /* Adjust position so it's visible outside the collapsed sidebar */
+  z-index: 1000;
+  transition: right 0.3s;
+}
+
+.sidebar.open .toggle-btn {
+  right: -50px;
+}
+
+.sidebar.closed .toggle-btn {
+  right: 10px; /* Adjust position to be fully visible when sidebar is closed */
+}
+
+.toc-content {
+  padding: 10px;
+}
