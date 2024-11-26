@@ -5,6 +5,7 @@ import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import {faFacebook, faYoutube, faSquareXTwitter, faInstagram, faLinkedin, faGithub} from "@fortawesome/free-brands-svg-icons"
 
 function Footer() {
+  
   return (
     <div className="bg-gray-100  py-8">
       <div className="">
@@ -28,15 +29,64 @@ function Footer() {
               Questions, comments or feedbacks ?
             </p>
             <button className="bg-green-700 text-white  font-bold py-2 px-4 mt-4 rounded">Give Us Feedback</button>
-            <div className="mt-4 flex justify-around ">
-                <button><FontAwesomeIcon className='h-7 w-7' icon={faFacebook} /></button>
-                <button><FontAwesomeIcon className='h-7 w-7' icon={faYoutube} /></button>
-                <button><FontAwesomeIcon className='h-7 w-7' icon={faSquareXTwitter} /></button>
-                <button><FontAwesomeIcon className='h-7 w-7' icon={faEnvelope} /></button>
-                <button><FontAwesomeIcon className='h-7 w-7' icon={faGithub} /></button>
-                <button><FontAwesomeIcon className='h-7 w-7' icon={faInstagram} /></button>
-                <button><FontAwesomeIcon className='h-7 w-7' icon={faLinkedin} /></button>
-            </div>
+            <div className="mt-4 gap-3 flex justify-around">
+  <a
+    href="https://www.facebook.com/ICPACigad/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-green-700 p-2 rounded-full"
+  >
+    <FontAwesomeIcon className="h-7 w-7 text-white" icon={faFacebook} />
+  </a>
+  <a
+    href="https://www.youtube.com/@igad_climate_prediction"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-green-700 p-2 rounded-full"
+  >
+    <FontAwesomeIcon className="h-7 w-7 text-white" icon={faYoutube} />
+  </a>
+  <a
+    href="https://x.com/IGAD_CPAC"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-green-700 p-2 rounded-full"
+  >
+    <FontAwesomeIcon className="h-7 w-7 text-white" icon={faSquareXTwitter} />
+  </a>
+  <a
+    href="mailto:disaster-risk-management@igad.int"
+    className="bg-green-700 p-2 rounded-full"
+  >
+    <FontAwesomeIcon className="h-7 w-7 text-white" icon={faEnvelope} />
+  </a>
+  <a
+    href="https://github.com/icpac-igad"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-green-700 p-2 rounded-full"
+  >
+    <FontAwesomeIcon className="h-7 w-7 text-white" icon={faGithub} />
+  </a>
+  <a
+    href="https://www.instagram.com/icpac_climatecenter/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-green-700 p-2 rounded-full"
+  >
+    <FontAwesomeIcon className="h-7 w-7 text-white" icon={faInstagram} />
+  </a>
+  <a
+    href="https://ke.linkedin.com/company/igad-climate-prediction-and-aplication-center-icpac-"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-teal-green-700 p-2 rounded-full"
+  >
+    <FontAwesomeIcon className="h-7 w-7 text-white" icon={faLinkedin} />
+  </a>
+</div>
+
+
           </div>
         </div>
       </div>

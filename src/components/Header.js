@@ -1,75 +1,3 @@
-// import React, { useState } from 'react';
-// import { Navbar, Nav } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import '../css/Header.css';
-
-// const Header = ({ setActiveComponent }) => {
-//   const [activeTab, setActiveTab] = useState('map'); 
-
-//   const handleSetActiveComponent = (tabName) => {
-//     setActiveTab(tabName);
-//     setActiveComponent(tabName);
-//   };
-
-//   return (
-//     <Navbar bg="light" expand="lg" className="header-navbar">
-//       <Navbar.Brand href="#home" className="header-brand">
-//         <img
-//           src="../icpaclogo_en.svg"
-//           width="70"
-//           height="50"
-//           className="d-inline-block align-top"
-//           alt="ICPAC logo"
-//         />
-//         <span className="header-title">ICPAC Pests Watch</span>
-//       </Navbar.Brand>
-//       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-//       <Navbar.Collapse id="basic-navbar-nav">
-//         <Nav className="ml-auto nav-right">
-//           <Nav.Link
-//             onClick={() => handleSetActiveComponent('home')}
-//             className={activeTab === 'home' ? 'active' : ''}
-//           >
-//             Home
-//           </Nav.Link>
-//           <Nav.Link
-//             onClick={() => handleSetActiveComponent('map')}
-//             className={activeTab === 'map' ? 'active' : ''}
-//           >
-//             Map
-//           </Nav.Link>
-//           <Nav.Link
-//           onClick={() => handleSetActiveComponent('analytics')}
-//           className={activeTab === 'analytics' ? 'active' : ''}
-//         >
-//           Analytics
-//         </Nav.Link>
-//             <Nav.Link
-//             onClick={() => handleSetActiveComponent('about')}
-//             className={activeTab === 'about' ? 'active' : ''}
-//           >
-//             About
-//             </Nav.Link>
-//             <Nav.Link
-//             onClick={() => handleSetActiveComponent('patners')}
-//             className={activeTab === 'patners' ? 'active' : ''}
-//           >
-//             Patners
-//           </Nav.Link> 
-//           <Nav.Link
-//           onClick={() => handleSetActiveComponent('contact')}
-//           className={activeTab === 'contact' ? 'active' : ''}
-//         >
-//           Contact
-//         </Nav.Link>   
-//         </Nav>
-//       </Navbar.Collapse>
-//     </Navbar>
-//   );
-// };
-
-// export default Header;
-
 import React, { useState, useEffect } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
@@ -114,11 +42,11 @@ const Header = ({ setActiveComponent }) => {
     { name: 'CONTACT', key: 'contact' },
   ];
 
-  return (
+  return ( 
     <div
-    className={`fixed top-0 z-1000 w-full ${
-      activeTab === 'map' ? 'bg-green-800 opacity-80' : isScrolled ? 'bg-green-800 opacity-80' : 'bg-transparent'
-    } transition duration-500`}
+    className={`fixed top-0 z-1000 w-full transition duration-500 ${
+      activeTab === 'map' ? 'relative bg-green-800 opacity-80' : isScrolled ? 'bg-green-800 opacity-80' : 'bg-transparent'
+    } `}
   >
   
     
@@ -143,7 +71,7 @@ const Header = ({ setActiveComponent }) => {
               className={`font-bold transition ${
                 activeTab === link.key
                   ? 'text-yellow-500'
-                  : 'text-white hover:text-yellow-500'
+                  : 'text-gray-100 hover:text-yellow-500'
               }`}
             >
               {link.name}

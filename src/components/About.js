@@ -1,11 +1,18 @@
-import React from 'react';
+import React , {useState} from 'react';
 import pestwatch from '../images/pestwatch.png';
 import icpac from '../images/icpac.png';
 import Footer from './Footer';
 //import Sheader from './Nav';
 import locust from '../images/desert_locust.jpg'
 
-function About() {
+function About({setActiveComponent}) {
+  const [activeTab, setActiveTab] = useState('map');
+
+
+  const handleSetActiveComponent = (tabName) => {
+    setActiveTab(tabName);
+    setActiveComponent(tabName);
+  };
   return (
     <div>
    {/* <Sheader />*/}
@@ -34,16 +41,16 @@ function About() {
           East Africa Pest Watch is a near-real-time system leveraging Earth Observation and weather data to monitor drought conditions and key agricultural pests, including desert locusts, red palm weevils,
            army worms, and quelea birds. Serving the ICPAC region, we provide timely insights to support sustainable pest management and protect livelihoods across East Africa.
           </p>
-          <button className="px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition duration-300">
+          <button className="px-3 py-1 bg-neutral-50 border-2 border-green-600 text-green-600 hover:text-white  rounded-full hover:bg-green-600 transition duration-300" onClick={() => handleSetActiveComponent('contact')}>
             Contact Us
           </button>
         </div>
-        <img src={pestwatch} alt="East Africa Drought Watch" className="w-full rounded-lg mx-20 my-10 md:w-1/3 animate-bounce-slow" />
+        <img src={pestwatch} alt="East Africa Drought Watch" className="w-full rounded-lg mx-20 my-10 md:w-1/3 animate-fade-in" />
       </div>
 
       {/* Section for ICPAC Climate Center */}
       <div className="flex flex-col md:flex-row items-center bg-white  mx-20 my-10 rounded-lg w-full">
-        <img src={icpac} alt="ICPAC Climate Center" className="w-full md:w-1/3 mx-20 my-10 rounded-2xl animate-fade-in" />
+        <img src={icpac} alt="ICPAC Climate Center" className="w-full md:w-1/3 mx-20 my-10 rounded-2xl animate-bounce-slow" />
         <div className="flex flex-col items-start mx-20 my-10 space-y-4">
           <h2 className="text-2xl font-bold">An East African Climate Center of Excellence</h2>
           <p className="text-gray-700">
@@ -51,7 +58,7 @@ function About() {
             to 11 East African Countries. Our services aim at creating resilience in a region deeply affected by climate
             change and extreme weather.
           </p>
-          <button className="px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition duration-300">
+          <button className="px-3 py-1 bg-neutral-50 border-2 border-green-600 text-green-600 hover:text-white  rounded-full hover:bg-green-600 transition duration-300" onClick={() => handleSetActiveComponent('contact')}>
             Contact Us
           </button>
         </div>

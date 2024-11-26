@@ -12,6 +12,7 @@ import Popup from './components/Popup';
 import About from './components/About';
 import Contact from './components/Contact';
 import Patners from './components/Patners';
+import Footer from './components/Footer';
 
 const App = () => {
   const layerNameMapping = {
@@ -237,11 +238,11 @@ const App = () => {
               selectedCountry={selectedCountry}
             />
           )}
-          {activeComponent === 'home' && <HomeComponent />}
+          {activeComponent === 'home' && <HomeComponent setActiveComponent={setActiveComponent} />}
           {activeComponent === 'analytics' && <AnalysisComponent />}
-          {activeComponent === 'patners' && <Patners/>}
-          {activeComponent === 'contact' && <Contact/>}
-          {activeComponent === 'about' && <About/>}
+          {activeComponent === 'patners' && <Patners setActiveComponent={setActiveComponent}/>}
+          {activeComponent === 'contact' && <Contact setActiveComponent={setActiveComponent}/>}
+          {activeComponent === 'about' && <About setActiveComponent={setActiveComponent}/>}
           {infoPopupLayer && (
             <Popup
               layerName={layerNameMapping[infoPopupLayer]}

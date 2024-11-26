@@ -4,27 +4,19 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    screens:{
+    screens: {
       'sm': '640px',
-      // => @media (min-width: 640px) { ... } // Small devices (phones)
-
       'md': '768px',
-      // => @media (min-width: 768px) { ... } // Medium devices (tablets)
-
       'lg': '1024px',
-      // => @media (min-width: 1024px) { ... } // Large devices (laptops)
-
       'xl': '1280px',
-      // => @media (min-width: 1280px) { ... } // Extra large devices (desktops)
-
       '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... } // Extra extra large devices (large desktops)
-
     },
     extend: {
       animation: {
         'bounce-slow': 'bounce-slow 3s ease-in-out infinite', // Slower, less intense bounce
         'fade-in': 'fadeIn 2s ease-in forwards', // Fade-in effect
+        'slideInLeft': 'slideInLeft 1s ease-out', // Slide-in from the left
+        'slideInRight': 'slideInRight 1s ease-out', // Slide-in from the right
       },
       keyframes: {
         'bounce-slow': {
@@ -35,8 +27,16 @@ module.exports = {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        slideInLeft: {
+          '0%': { transform: 'translateX(-100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        slideInRight: {
+          '0%': { transform: 'translateX(100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
       },
     },
   },
   plugins: [],
-}
+};
